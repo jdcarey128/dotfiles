@@ -1,7 +1,33 @@
+set nocompatible
+filetype off
+set shellslash
+set rtp+=~/vimfiles/bundle/Vundle.vim  " set runtime path
+call vundle#begin('~/vimfiles/bundle')
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+
 set number
-set rnu
+set relativenumber
+set is          " show partial matcvhes for search patterns
+set ic          " ignore case sensitivity for searches
+syntax on
 
 let mapleader = "\<Space>"
 
-nmap <leader>so :source
-nmap <leader>vr :sp $MYVIMR<cr>
+nmap <leader>so :source $MYVIMRC<cr>
+nmap <leader>vr :vsplit $MYVIMRC<cr>
+nmap 0 ^
+
