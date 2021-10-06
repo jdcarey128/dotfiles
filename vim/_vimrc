@@ -1,0 +1,7 @@
+set number
+set rnu
+
+let mapleader = "\<Space>"
+
+nmap <leader>so :source
+nmap <leader>vr :sp $MYVIMR<cr>
